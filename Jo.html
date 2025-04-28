@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BAF Cleaning</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to bottom right, #e0f7fa, #ffffff);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        nav {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+        nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #3498db;
+            font-weight: bold;
+            font-size: 18px;
+            cursor: pointer;
+        }
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-size: 28px;
+            text-align: center;
+            padding: 0 10px;
+        }
+        .button {
+            display: block;
+            width: 250px;
+            margin: 10px 0;
+            padding: 15px;
+            background-color: #3498db;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 18px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .button:hover {
+            background-color: #2980b9;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a onclick="setLanguage('fr')">FR</a> |
+        <a onclick="setLanguage('en')">EN</a> |
+        <a onclick="setLanguage('nl')">NL</a>
+    </nav>
+
+    <h1 id="title">Bienvenue sur le site officiel de BAF Cleaning</h1>
+    <a class="button" id="instagram" href="https://www.instagram.com/baf_cleaning" target="_blank">Instagram</a>
+    <a class="button" id="call" href="tel:0492820154">Appeler</a>
+    <a class="button" id="email" href="mailto:baf.cleaning@hotmail.com">Envoyer un email</a>
+
+    <script>
+        function setLanguage(lang) {
+            const translations = {
+                fr: {
+                    title: "Bienvenue sur le site officiel de BAF Cleaning",
+                    instagram: "Instagram",
+                    call: "Appeler",
+                    email: "Envoyer un email"
+                },
+                en: {
+                    title: "Welcome to the official website of BAF Cleaning",
+                    instagram: "Instagram",
+                    call: "Call",
+                    email: "Send an email"
+                },
+                nl: {
+                    title: "Welkom op de officiële website van BAF Cleaning",
+                    instagram: "Instagram",
+                    call: "Bellen",
+                    email: "E-mail sturen"
+                }
+            };
+            document.getElementById('title').innerText = translations[lang].title;
+            document.getElementById('instagram').innerText = translations[lang].instagram;
+            document.getElementById('call').innerText = translations[lang].call;
+            document.getElementById('email').innerText = translations[lang].email;
+        }
+    </script>
+</body>
+</html>
